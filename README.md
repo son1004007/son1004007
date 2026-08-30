@@ -2,7 +2,7 @@
 
 업무 요구사항을 **데이터, 권한, 처리 상태와 실패 조건이 명확한 백엔드 시스템으로 구현**합니다.
 
-AI 기능은 결과를 그대로 신뢰하지 않고, 서버의 검증과 사람의 승인 안에서 실제 업무와 연결합니다. Java/Spring, Python/FastAPI, SQL, Docker와 LLM은 문제에 맞게 선택하는 도구이며, 자동 테스트와 실제 실행 환경 검증으로 동작 범위와 실패 조건을 확인합니다.
+AI 기능은 결과를 그대로 신뢰하지 않고, 서버의 검증과 사람의 승인 안에서 실제 업무와 연결합니다. Java/Spring과 Python/FastAPI를 업무 특성에 따라 사용해 왔으며, 현재 독립 공개 재현 샘플은 Java/Spring 쪽이 더 강합니다. SQL, Docker와 LLM은 필요한 문제를 해결하기 위한 도구로 사용하고, 자동 테스트와 실제 실행 환경 검증으로 동작 범위와 실패 조건을 확인합니다.
 
 [포트폴리오](https://son1004007.github.io/engineering-career-portfolio/) | [코드와 검증 근거](https://github.com/son1004007/engineering-career-portfolio) | [어떻게 개발하는가](https://github.com/son1004007/engineering-career-portfolio/blob/main/HOW_I_ENGINEER.md) | [실무 기술 사례](https://son1004007.github.io/engineering-career-portfolio/blog/)
 
@@ -26,7 +26,7 @@ AI 기능은 결과를 그대로 신뢰하지 않고, 서버의 검증과 사람
 - AI는 자연어 요청을 바탕으로 초안을 제안
 - 서버는 사용자 권한, 업무 상태, 중복 요청과 발주 가능 여부를 최종 확인
 - 모델 오류나 잘못된 출력은 저장 전에 차단
-- 실제 로컬 LLM `gemma3:12b`를 이용한 합성 업무 요청 E2E `9/9` 성공
+- 실제 로컬 LLM `gemma3:12b`로 9개 핵심 합성 업무 시나리오 E2E 전건 성공
 - 실제 Internet HTTPS 경로에서 사용자 작업 분리, rate limit, DB/model 비노출, close/reopen 검증
 
 ### [자연어 질문을 데이터 조회로 연결하는 Text2SQL / NL2SQL](https://github.com/son1004007/engineering-career-portfolio/blob/main/03_portfolio/case-studies/text2sql-validation.md)
@@ -37,6 +37,8 @@ AI 기능은 결과를 그대로 신뢰하지 않고, 서버의 검증과 사람
 - SQL 검증과 실행 흐름
 - validation set과 다중 모델 비교
 - 실패 유형 분류와 결과 기록
+
+이 경험은 공개 가능한 실무 evidence가 중심이며, Java/Spring 사례와 같은 수준의 독립 실행 가능한 Python/FastAPI 공개 샘플은 다음 보강 대상으로 두고 있습니다.
 
 ### [실제 업무 문제를 독립 샘플로 재현한 Engineering Case Studies](https://github.com/son1004007/engineering-career-portfolio/blob/main/03_portfolio/case-studies/README.md)
 
@@ -71,7 +73,7 @@ AI는 조사, 구현과 리뷰를 빠르게 만드는 도구로 사용합니다.
 
 - **Backend:** Java, Spring Boot, Python, FastAPI
 - **Data:** Oracle, PostgreSQL, SQL
-- **AI integration:** LLM integration, structured output validation, Text2SQL/NL2SQL, RAG/Agent patterns
+- **AI integration:** LLM integration, structured output validation, Text2SQL/NL2SQL
 - **Operations:** Linux, Docker, Tomcat, Nginx, Jenkins, GitHub Actions
 - **Security:** 인증, 권한 통제, session, audit, secure failure handling
 
